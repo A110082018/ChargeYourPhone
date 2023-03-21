@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
+//這程式在管理遊戲介面上的按鈕
 public class SMeneger : MonoBehaviour
 {
     public void Play()
@@ -26,5 +28,13 @@ public class SMeneger : MonoBehaviour
     public void Quit()
     {
         //離開遊戲
+        Application.Quit();
+        EditorApplication.isPlaying = false;
+    }
+
+    public void back()
+    {
+        //回到遊戲介面
+        SceneManager.LoadScene(0);
     }
 }

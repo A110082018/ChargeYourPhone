@@ -22,7 +22,7 @@ public class SMeneger : MonoBehaviour
     public void Setup()
     {
         //¹CÀ¸³]©w
-
+        SceneManager.LoadScene(2);
     }
 
     public void Quit()

@@ -37,4 +37,9 @@ public class SMeneger : MonoBehaviour
         //回到遊戲介面
         SceneManager.LoadScene(0);
     }
+    public void enter()
+    {
+        //回到遊戲介面
+        SceneManager.LoadScene(3);
+    }
 }

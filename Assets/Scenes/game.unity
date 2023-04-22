@@ -1329,9 +1329,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.64331335, y: 1.0087686, z: 0.40973347}
-  m_Center: {x: 0.006038861, y: 0.536727, z: 0.0039647333}
---- !u!114 &630713854
+  m_Size: {x: 0.5491069, y: 1.0087686, z: 0.40973347}
+  m_Center: {x: -0.0020601766, y: 0.536727, z: 0.0039647333}
+--- !u!114 &630713857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1343,8 +1343,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281cee988d8cf944da27626ddf1f4d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
+  jumpForce: 7
   rb: {fileID: 630713852}
+  maxJumps: 2
 --- !u!1 &642358169
 GameObject:
   m_ObjectHideFlags: 0
@@ -2153,7 +2154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4889916270699016, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.36
+      value: 16.77
       objectReference: {fileID: 0}
     - target: {fileID: 4889916270699016, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3255,7 +3256,7 @@ GameObject:
   - component: {fileID: 1305037035396853594}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

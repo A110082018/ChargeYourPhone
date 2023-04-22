@@ -5,17 +5,22 @@ public class jump : MonoBehaviour
 
     public float jumpForce = 10f;
     public Rigidbody rb;
+    public int maxJumps = 2;
+
+    private int jumpsRemaining;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        jumpsRemaining = maxJumps;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && jumpsRemaining > 0)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            jumpsRemaining--;
         }
     }
 
@@ -23,7 +28,7 @@ public class jump : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            // Do something if the player hits the ground
+            jumpsRemaining = maxJumps;
         }
     }
 }

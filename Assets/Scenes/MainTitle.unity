@@ -492,6 +492,11 @@ PrefabInstance:
       propertyPath: m_Antialiasing
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -8126528036427038094, guid: 25385c880c54826468de52ea63c983c0,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -7946406986126484165, guid: 25385c880c54826468de52ea63c983c0,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -639,8 +644,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3384916066200019345, guid: 25385c880c54826468de52ea63c983c0,
         type: 3}
+      propertyPath: m_CameraType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3384916066200019345, guid: 25385c880c54826468de52ea63c983c0,
+        type: 3}
       propertyPath: m_Antialiasing
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3384916066200019345, guid: 25385c880c54826468de52ea63c983c0,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2576546752317712154, guid: 25385c880c54826468de52ea63c983c0,
         type: 3}
@@ -702,6 +717,11 @@ PrefabInstance:
       propertyPath: m_Antialiasing
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -682167111979389434, guid: 25385c880c54826468de52ea63c983c0,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -633532837830808732, guid: 25385c880c54826468de52ea63c983c0,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -761,6 +781,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Antialiasing
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872786157485494214, guid: 25385c880c54826468de52ea63c983c0,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2164979057946594904, guid: 25385c880c54826468de52ea63c983c0,
         type: 3}
@@ -1109,7 +1134,7 @@ MonoBehaviour:
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
+  m_CameraType: 1
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:

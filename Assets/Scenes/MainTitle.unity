@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: ef0dcd6fc36d3ef45832cc444778f485,
+  m_LightingDataAsset: {fileID: 112000000, guid: 6fde649419a320d47b5bf1d401e41348,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 0878e63d6b23b0c478ca2a4eb68b082a,
     type: 2}
@@ -300,7 +300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &159564390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,7 +825,7 @@ PrefabInstance:
     - target: {fileID: 3910068570237715949, guid: 25385c880c54826468de52ea63c983c0,
         type: 3}
       propertyPath: m_Lightmapping
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4603935041024468202, guid: 25385c880c54826468de52ea63c983c0,
         type: 3}
@@ -1371,7 +1371,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 613599513}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1202026748}
+        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
+        m_MethodName: Setup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &613599513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1997,13 +2009,14 @@ GameObject:
   - component: {fileID: 1202026746}
   - component: {fileID: 1202026745}
   - component: {fileID: 1202026744}
+  - component: {fileID: 1202026748}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1202026744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2086,6 +2099,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1202026748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202026743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c56818f04deb754c920dab7beca8a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1215416616
 GameObject:
   m_ObjectHideFlags: 0
@@ -2124,10 +2149,10 @@ RectTransform:
   m_Father: {fileID: 1202026747}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 141, y: -0.5}
-  m_SizeDelta: {x: 179.68732, y: 2}
+  m_AnchoredPosition: {x: 141, y: -280.5}
+  m_SizeDelta: {x: 179.68732, y: 562}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215416618
 MonoBehaviour:
@@ -2388,7 +2413,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1320729479}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1202026748}
+        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1320729479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3222,7 +3259,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2104746334}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1202026748}
+        m_TargetAssemblyTypeName: SMeneger, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2104746334
 MonoBehaviour:
   m_ObjectHideFlags: 0

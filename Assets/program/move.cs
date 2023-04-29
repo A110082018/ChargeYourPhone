@@ -1,41 +1,46 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class move : MonoBehaviour
 {
     public float speed = 5.0f;
-
-    private CharacterController _character;
-
-    private Animator _animator;
+    private Rigidbody rigidbody;
+    private Animator animator;
 
     void Start()
     {
-        _character = GetComponent<CharacterController>();
-        _animator = GetComponent<Animator>();
+        rigidbody = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
+        rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        Vector3 dir = new Vector3(x: horizontal, y: 0, z: vertical);
+
+        Vector3 dir = new Vector3(horizontal, 0, vertical);
+        if (dir.magnitude > 1) dir.Normalize();
 
         if (dir != Vector3.zero)
         {
             transform.rotation = Quaternion.LookRotation(dir);
 
-            _animator.SetBool("isRun", true);
+            animator.SetBool("isRun", true);
 
-            transform.Translate(dir * speed * Time.deltaTime, Space.World);
+            rigidbody.MovePosition(transform.position + dir * speed * Time.fixedDeltaTime);
         }
         else
         {
-            _animator.SetBool("isRun", false);
+            animator.SetBool("isRun", false);
         }
-
-
     }
 }
+
+
+
+
+
+
 

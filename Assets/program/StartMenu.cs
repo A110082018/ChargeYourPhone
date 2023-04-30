@@ -7,8 +7,15 @@ public class StartMenu : MonoBehaviour
 {
     public GameObject startMenuPanel;
 
-    private bool shouldClosePanel = false;
+    public static bool shouldClosePanel = false;
 
+
+
+    private void Start()
+    {
+        Time.timeScale = 0f;
+       
+    }
 
     public void EXITPANEL()
     {
@@ -21,7 +28,11 @@ public class StartMenu : MonoBehaviour
         {
             startMenuPanel.SetActive(false);
             shouldClosePanel = false;
+            Time.timeScale = 1f;
+           
         }
     }
+
+   
 }
 

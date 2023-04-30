@@ -11,16 +11,20 @@ public class Ray1 : MonoBehaviour
     public GameObject littlegameplay2;
     public GameObject littlecamera2;
     public  GameObject player;
+    public GameObject RAYcontroller;
 
 
     private void Start()
     {
+        RAYcontroller.SetActive(true);
         littlegameplay.SetActive(false);
         littlecamera.SetActive(false);
         littlegameplay2.SetActive(false);
         littlecamera2.SetActive(false);
         player.SetActive(true);
     }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -32,6 +36,7 @@ public class Ray1 : MonoBehaviour
       
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit)&& hit.collider.gameObject.name == "Bed_TeddyBear")
         {
+
             player.SetActive(false);
             littlegameplayON = true;
             littlegameplay.SetActive(true);
@@ -40,6 +45,8 @@ public class Ray1 : MonoBehaviour
             Debug.DrawLine(Camera.main.transform.position, hit.transform.position, Color.red, 0.5f, true);
                   
         }
+
+
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && hit.collider.gameObject.name == "item2")
         {
             player.SetActive(false);
@@ -50,5 +57,17 @@ public class Ray1 : MonoBehaviour
             //Debug.DrawLine(Camera.main.transform.position, hit.transform.position, Color.red, 0.5f, true);
 
         }
+
+        if(PauseMenu.GameIsPaused == true)
+        {
+            RAYcontroller.SetActive(false);
+        }
+
+        if(PauseMenu.GameIsPaused == false)
+        {
+            RAYcontroller.SetActive(true);
+        }
+        
     }
+
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class move : MonoBehaviour
 {
+    public static bool ismove = true;
     public float speed = 5.0f;
     private Rigidbody rigidbody;
     private Animator animator;
@@ -17,6 +18,15 @@ public class move : MonoBehaviour
     }
 
     void FixedUpdate()
+    {
+       if (ismove == true)
+       {
+            Move();
+       }
+      
+      
+    }
+    void Move()
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");

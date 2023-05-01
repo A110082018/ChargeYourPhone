@@ -34,7 +34,7 @@ public class Ray1 : MonoBehaviour
 
         RaycastHit hit;
       
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit)&& hit.collider.gameObject.name == "Bed_TeddyBear")
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit)&& hit.collider.gameObject.name == "Bed_Doll")
         {
 
             player.SetActive(false);

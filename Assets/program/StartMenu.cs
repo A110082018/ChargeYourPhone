@@ -26,6 +26,7 @@ public class StartMenu : MonoBehaviour
     {
         if (shouldClosePanel)
         {
+            Cameraswitch.startgame = true;
             startMenuPanel.SetActive(false);
             shouldClosePanel = false;
             Time.timeScale = 1f;

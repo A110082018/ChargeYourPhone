@@ -29,6 +29,10 @@ public class Getthing : MonoBehaviour
         {
             UI2.enabled = true;
         }
+        if (Littlegame3final.finish3 == true)
+        {
+            UI3.enabled = true;
+        }
 
     }
 

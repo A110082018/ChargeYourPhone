@@ -10,6 +10,10 @@ public class Ray1 : MonoBehaviour
     public  GameObject littlecamera;
     public GameObject littlegameplay2;
     public GameObject littlecamera2;
+    public GameObject littlegameplay3;
+    public GameObject littlecamera3;
+    public GameObject littlegameplay4;
+    public GameObject littlecamera4;
     public  GameObject player;
     public GameObject RAYcontroller;
 
@@ -21,6 +25,10 @@ public class Ray1 : MonoBehaviour
         littlecamera.SetActive(false);
         littlegameplay2.SetActive(false);
         littlecamera2.SetActive(false);
+        littlegameplay3.SetActive(false);
+        littlecamera3.SetActive(false);
+        littlegameplay4.SetActive(false);
+        littlecamera4.SetActive(false);
         player.SetActive(true);
     }
 
@@ -57,8 +65,29 @@ public class Ray1 : MonoBehaviour
             //Debug.DrawLine(Camera.main.transform.position, hit.transform.position, Color.red, 0.5f, true);
 
         }
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && hit.collider.gameObject.name == "item3")
+        {
+            player.SetActive(false);
+            littlegameplayON = true;
+            littlegameplay2.SetActive(true);
+            littlecamera2.SetActive(true);
+            //Debug.Log(hit.transform.name);
+            //Debug.DrawLine(Camera.main.transform.position, hit.transform.position, Color.red, 0.5f, true);
 
-        if(PauseMenu.GameIsPaused == true)
+        }
+
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && hit.collider.gameObject.name == "item4")
+        {
+            player.SetActive(false);
+            littlegameplayON = true;
+            littlegameplay4.SetActive(true);
+            littlecamera4.SetActive(true);
+            //Debug.Log(hit.transform.name);
+            //Debug.DrawLine(Camera.main.transform.position, hit.transform.position, Color.red, 0.5f, true);
+
+        }
+
+        if (PauseMenu.GameIsPaused == true)
         {
             RAYcontroller.SetActive(false);
         }

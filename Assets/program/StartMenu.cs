@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class StartMenu : MonoBehaviour
 {
+    public static bool startgame = false;
+
     public GameObject startMenuPanel;
 
     public static bool shouldClosePanel = false;
@@ -26,7 +28,7 @@ public class StartMenu : MonoBehaviour
     {
         if (shouldClosePanel)
         {
-            Cameraswitch.startgame = true;
+            startgame = true;
             startMenuPanel.SetActive(false);
             shouldClosePanel = false;
             Time.timeScale = 1f;

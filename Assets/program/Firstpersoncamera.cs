@@ -5,7 +5,7 @@ using UnityEngine;
 public class Firstpersoncamera : MonoBehaviour
 {
 
-    public static bool infirstpersonmode = false;
+   
     public float mouseSensitivity = 100f;
 
     public Transform playerBody;
@@ -33,14 +33,6 @@ public class Firstpersoncamera : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
 
-        if(infirstpersonmode == true)
-        {
-            move.ismove = false;
-        }
-
-        else if(infirstpersonmode == false)
-        {
-            move.ismove = true;
-        }
+      
     }
 }

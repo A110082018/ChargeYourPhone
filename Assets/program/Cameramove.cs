@@ -1,64 +1,42 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Cameramove : MonoBehaviour
 {
-    public Transform target; //¸òÀH¥Ø¼Ð¥D¨¤
-    public float x;
-    public float y;
-    public float xSpeed = 1;//xÆF±Ó«×
-    public float ySpeed = 1;//yÆF±Ó«×
-    public float Distance;//·í«eÄá¼v¾÷»P¥D¨¤ªº¶ZÂ÷
-    public float DisSpeed = 1;//ºu½ü±±¨î¥D¨¤¶ZÂ÷ªºÆF±Ó«×
-    public float minDistance = 1;//Äá¼v¾÷»P¥D¨¤ªº³Ì¤p¶ZÂ÷
-    public float maxDistance = 5;//Äá¼v¾÷»P¥D¨¤ªº³Ì¤j¶ZÂ÷
 
-    private Quaternion rotationEuler;
-    private Vector3 cameraPosition;
+    public Transform player; // çŽ©å®¶çš„ Transform ç»„ä»¶
+    public float rotateSpeed = 5f; // æ‘„åƒæœºæ—‹è½¬é€Ÿåº¦
 
-    private void LateUpdate()
-    {
+    private Vector3 offset; // æ‘„åƒæœºä½ç½®åç§»é‡
 
-        //Åª¨ú·Æ¹«ªºx y²¾°Ê
-        x += Input.GetAxis("Mouse X") * xSpeed * Time.deltaTime;
-        y -= Input.GetAxis("Mouse Y") * ySpeed * Time.deltaTime;
-
-
-        //«OÃÒx³]©w¦b360«×¥H¤º
-        if (x > 360)
-        {
-            x -= 360;
-        }
-        else if (x<0)
-        {
-            x += 360;
-        }
-
-        //Åª¨ú·Æ¹«ºu½üªº¼Æ­È
-        Distance -= Input.GetAxis("Mouse ScrollWheel") * DisSpeed * Time.deltaTime;
-        //­­¨î¶ZÂ÷
-        Distance = Mathf.Clamp(Distance, minDistance, maxDistance);
-
-        //¹BºâÄá¼v¾÷®y¼Ð¡B±ÛÂà
-        rotationEuler = Quaternion.Euler(y, x, 0);
-        cameraPosition = rotationEuler * new Vector3(0, 0, -Distance) + target.position;
-
-
-        transform.rotation = rotationEuler;
-        transform.position = cameraPosition;
-    }
-
-     
-    // Start is called before the first frame update
     void Start()
     {
-        
+        // è®¡ç®—æ‘„åƒæœºä½ç½®åç§»é‡
+        offset = transform.position - player.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        
+        // èŽ·å–é¼ æ ‡çš„æ°´å¹³è¾“å…¥
+        float horizontalInput = Input.GetAxis("Mouse X");
+
+        // è®¡ç®—æ‘„åƒæœºç»•ç€çŽ©å®¶çš„æ—‹è½¬è§’åº¦
+        float angle = horizontalInput * rotateSpeed;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.up);
+
+        // åº”ç”¨æ—‹è½¬
+        offset = rotation * offset;
+        transform.position = player.position + offset;
+
+        // ä½¿æ‘„åƒæœºå§‹ç»ˆæœå‘çŽ©å®¶
+        transform.LookAt(player);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Left mouse button clicked");
+        }
     }
+
+
 }

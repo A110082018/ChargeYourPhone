@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cameraswitch : MonoBehaviour
 {
-   
+    public GameObject startcamera;
     public GameObject p1;
     public GameObject p3;
     private bool camerastatus = true;
@@ -13,34 +13,51 @@ public class Cameraswitch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        startcamera.SetActive(true);
         p1.SetActive(false);
-        p3.SetActive(true);
+        p3.SetActive(false);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-       
 
+
+        if (StartMenu.startgame == true)
+        {
+            startcamera.SetActive(false);
+            p3.SetActive(true);
+
+           
+        }
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            if (camerastatus == true)
-            {
-                p1.SetActive(false);
-                p3.SetActive(true);
-                camerastatus = false;
-            }
-            else
-            {
-
-                p1.SetActive(true);
-                p3.SetActive(false);
-                camerastatus = true;
-            }
+            
+            camera();
         }
-        
-       
+
     }
+    void camera()
+    {
+        if (camerastatus == true)
+        {
+            
+            p1.SetActive(false);
+            p3.SetActive(true);
+            camerastatus = false;
+            move.ismove = true;
+        }
+
+        else if(camerastatus == false)
+        {
+
+            p1.SetActive(true);
+            p3.SetActive(false);
+            camerastatus = true;
+            move.ismove = false;
+        }
+
+    }
+
 }

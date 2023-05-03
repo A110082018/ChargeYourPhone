@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class StartMenu : MonoBehaviour
 {
+    public static bool startgame = false;
+
     public GameObject startMenuPanel;
 
     public static bool shouldClosePanel = false;
@@ -13,6 +15,7 @@ public class StartMenu : MonoBehaviour
 
     private void Start()
     {
+
         Time.timeScale = 0f;
        
     }
@@ -26,6 +29,8 @@ public class StartMenu : MonoBehaviour
     {
         if (shouldClosePanel)
         {
+
+            startgame = true;
             startMenuPanel.SetActive(false);
             shouldClosePanel = false;
             Time.timeScale = 1f;

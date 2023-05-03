@@ -1,19 +1,18 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Firstpersoncamera : MonoBehaviour
 {
 
-    public float mouseSensitivity = 100f;
 
-    public Transform playerBody;
+    public float lookSpeed = 3.0f; // 鼠标移动速度
+    public float moveSpeed = 3.0f; // 相机移动速度
 
-   
+    private float rotationX = 0.0f;
+    private float rotationY = 0.0f;
 
-    float xRotation = 0f;
 
-   
     // Start is called before the first frame update
     void Start()
     {
@@ -24,14 +23,16 @@ public class Firstpersoncamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //���ਭ�骺����
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        // 获取鼠标移动量
+        rotationX += Input.GetAxis("Mouse X") * lookSpeed;
+        rotationY += Input.GetAxis("Mouse Y") * lookSpeed;
 
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f); // ���Y������b90��
+        // 限制相机的俯仰角度
+        rotationY = Mathf.Clamp(rotationY, -90, 90);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
+        // 根据鼠标移动量旋转相机
+        transform.localRotation = Quaternion.AngleAxis(rotationX, Vector3.up);
+        transform.localRotation *= Quaternion.AngleAxis(rotationY, Vector3.left);
+
     }
 }

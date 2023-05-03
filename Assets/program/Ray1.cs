@@ -20,7 +20,7 @@ public class Ray1 : MonoBehaviour
 
     private void Start()
     {
-        RAYcontroller.SetActive(true);
+        RAYcontroller.SetActive(false);
         littlegameplay.SetActive(false);
         littlecamera.SetActive(false);
         littlegameplay2.SetActive(false);
@@ -55,7 +55,7 @@ public class Ray1 : MonoBehaviour
         }
 
 
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && hit.collider.gameObject.name == "item2")
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && hit.collider.gameObject.name == "gametrigger2")
         {
             player.SetActive(false);
             littlegameplayON = true;
@@ -65,12 +65,12 @@ public class Ray1 : MonoBehaviour
             //Debug.DrawLine(Camera.main.transform.position, hit.transform.position, Color.red, 0.5f, true);
 
         }
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && hit.collider.gameObject.name == "item3")
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && hit.collider.gameObject.name == "gametrigger3")
         {
             player.SetActive(false);
             littlegameplayON = true;
-            littlegameplay2.SetActive(true);
-            littlecamera2.SetActive(true);
+            littlegameplay3.SetActive(true);
+            littlecamera3.SetActive(true);
             //Debug.Log(hit.transform.name);
             //Debug.DrawLine(Camera.main.transform.position, hit.transform.position, Color.red, 0.5f, true);
 

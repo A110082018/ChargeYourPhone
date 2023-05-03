@@ -9,6 +9,7 @@ public class move : MonoBehaviour
     private Rigidbody rigidbody;
     private Animator animator;
     private Transform mainCameraTransform;
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();

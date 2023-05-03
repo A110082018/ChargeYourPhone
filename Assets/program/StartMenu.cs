@@ -15,6 +15,7 @@ public class StartMenu : MonoBehaviour
 
     private void Start()
     {
+
         Time.timeScale = 0f;
        
     }
@@ -28,6 +29,7 @@ public class StartMenu : MonoBehaviour
     {
         if (shouldClosePanel)
         {
+
             startgame = true;
             startMenuPanel.SetActive(false);
             shouldClosePanel = false;

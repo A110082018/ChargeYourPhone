@@ -603,40 +603,9 @@ CircleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-<<<<<<< HEAD
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7313345866922958352, guid: b6e761ea46fa8a04492a1eab88cca099, type: 3}
---- !u!1 &76549759 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3761016026393346806, guid: 999483701bfb3204a9fea315c3661cd1,
-    type: 3}
-  m_PrefabInstance: {fileID: 652030759}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &76549763
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76549759}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4364886008205168092, guid: 999483701bfb3204a9fea315c3661cd1, type: 3}
---- !u!1001 &82352490
-PrefabInstance:
-  m_ObjectHideFlags: 0
-=======
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.043781996, y: -0.009077041}
->>>>>>> origin/main
   serializedVersion: 2
   m_Radius: 2.3846953
 --- !u!212 &63260614
@@ -5292,8 +5261,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5491069, y: 1.0087686, z: 0.40973347}
-  m_Center: {x: -0.0020601766, y: 0.536727, z: 0.0039647333}
+  m_Size: {x: 0.5491069, y: 1.0535285, z: 0.40973347}
+  m_Center: {x: -0.0020601843, y: 0.5143471, z: 0.003964735}
 --- !u!114 &630713857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5308,7 +5277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 9
   rb: {fileID: 630713852}
-  maxJumps: 3
+  maxJumps: 2
 --- !u!4 &630713860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4889916270699016, guid: 313ad0ef31f75b84f9f31c0528802fdd,
@@ -6912,6 +6881,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1014641446843644772, guid: 999483701bfb3204a9fea315c3661cd1,
         type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014641446843644772, guid: 999483701bfb3204a9fea315c3661cd1,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -7047,6 +7021,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1979674447551562302, guid: 999483701bfb3204a9fea315c3661cd1,
         type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979674447551562302, guid: 999483701bfb3204a9fea315c3661cd1,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -7114,6 +7093,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ScaleInLightmap
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742385892674406503, guid: 999483701bfb3204a9fea315c3661cd1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2742385892674406503, guid: 999483701bfb3204a9fea315c3661cd1,
         type: 3}
@@ -7340,8 +7324,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 4541896296378603886, guid: 999483701bfb3204a9fea315c3661cd1,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7352,14 +7334,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> origin/main
     - target: {fileID: 4900918846376644854, guid: 999483701bfb3204a9fea315c3661cd1,
         type: 3}
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 4900918846376644854, guid: 999483701bfb3204a9fea315c3661cd1,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7375,7 +7354,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> origin/main
     - target: {fileID: 5005300652396187828, guid: 999483701bfb3204a9fea315c3661cd1,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7386,8 +7364,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 5018989353317485782, guid: 999483701bfb3204a9fea315c3661cd1,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7418,14 +7394,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
->>>>>>> origin/main
     - target: {fileID: 5284905395220934673, guid: 999483701bfb3204a9fea315c3661cd1,
         type: 3}
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 5284905395220934673, guid: 999483701bfb3204a9fea315c3661cd1,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7451,7 +7424,6 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
->>>>>>> origin/main
     - target: {fileID: 5434904466660105460, guid: 999483701bfb3204a9fea315c3661cd1,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7841,6 +7813,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ScaleInLightmap
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8527012523616389862, guid: 999483701bfb3204a9fea315c3661cd1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 8527012523616389862, guid: 999483701bfb3204a9fea315c3661cd1,
         type: 3}
@@ -8573,7 +8550,7 @@ MeshCollider:
   m_GameObject: {fileID: 728611765}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -11725,7 +11702,7 @@ MeshCollider:
   m_GameObject: {fileID: 1158462469}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -12329,7 +12306,7 @@ MeshCollider:
   m_GameObject: {fileID: 1338728837}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -14922,7 +14899,7 @@ MeshCollider:
   m_GameObject: {fileID: 1730866691}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30

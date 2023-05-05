@@ -12,6 +12,8 @@ public class Controller : MonoBehaviour
     public GameObject littlecamera3;
     public GameObject littlegameplay4;
     public GameObject littlecamera4;
+    public GameObject littlegameplay5;
+    public GameObject littlecamera5;
     public GameObject player;
     
 
@@ -53,6 +55,13 @@ public class Controller : MonoBehaviour
             Ray1.littlegameplayON = false;
             littlegameplay4.SetActive(false);
             littlecamera4.SetActive(false);
+        }
+        if (Littlegame5final.finish5 == true)
+        {
+            player.SetActive(true);
+            Ray1.littlegameplayON = false;
+            littlegameplay5.SetActive(false);
+            littlecamera5.SetActive(false);
         }
 
 

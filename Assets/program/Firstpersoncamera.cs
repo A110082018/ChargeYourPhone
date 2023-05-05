@@ -4,23 +4,12 @@ using UnityEngine;
 
 public class Firstpersoncamera : MonoBehaviour
 {
-
-
     public float lookSpeed = 3.0f; // 鼠标移动速度
     public float moveSpeed = 3.0f; // 相机移动速度
 
     private float rotationX = 0.0f;
     private float rotationY = 0.0f;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-       
-    }
-
-    // Update is called once per frame
     void Update()
     {
         // 获取鼠标移动量

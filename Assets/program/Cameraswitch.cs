@@ -13,9 +13,9 @@ public class Cameraswitch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startcamera.SetActive(true);
+        
         p1.SetActive(false);
-        p3.SetActive(false);
+        p3.SetActive(true);
         
     }
 
@@ -23,17 +23,9 @@ public class Cameraswitch : MonoBehaviour
     void Update()
     {
 
-
-        if (StartMenu.startgame == true)
-        {
-            startcamera.SetActive(false);
-            p3.SetActive(true);
-
-           
-        }
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            
+
             camera();
         }
 

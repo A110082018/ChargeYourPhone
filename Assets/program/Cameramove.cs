@@ -12,10 +12,12 @@ public class Cameramove : MonoBehaviour
 
     void Start()
     {
+        
         // 计算摄像机位置偏移量
         offset = transform.position - player.position;
     }
 
+  
     void LateUpdate()
     {
         // 获取鼠标的水平输入

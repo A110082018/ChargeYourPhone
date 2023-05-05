@@ -14,13 +14,15 @@ public class Ray1 : MonoBehaviour
     public GameObject littlecamera3;
     public GameObject littlegameplay4;
     public GameObject littlecamera4;
+    public GameObject littlegameplay5;
+    public GameObject littlecamera5;
     public  GameObject player;
-    public GameObject RAYcontroller;
+
 
 
     private void Start()
     {
-        RAYcontroller.SetActive(false);
+
         littlegameplay.SetActive(false);
         littlecamera.SetActive(false);
         littlegameplay2.SetActive(false);
@@ -29,6 +31,8 @@ public class Ray1 : MonoBehaviour
         littlecamera3.SetActive(false);
         littlegameplay4.SetActive(false);
         littlecamera4.SetActive(false);
+        littlegameplay5.SetActive(false);
+        littlecamera5.SetActive(false);
         player.SetActive(true);
     }
 
@@ -87,15 +91,7 @@ public class Ray1 : MonoBehaviour
 
         }
 
-        if (PauseMenu.GameIsPaused == true)
-        {
-            RAYcontroller.SetActive(false);
-        }
-
-        if(PauseMenu.GameIsPaused == false)
-        {
-            RAYcontroller.SetActive(true);
-        }
+       
         
     }
 

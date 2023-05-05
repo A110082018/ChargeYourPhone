@@ -7,15 +7,15 @@ public class Getthing : MonoBehaviour
 
     public Image UI1;
     public Image UI2;
-    public Image UI3;
-
+    public Image Key;
+    public static bool Getkey = false;
 
     // Start is called before the first frame update
     void Start()
     {
         UI1.enabled = false;
         UI2.enabled = false;
-        UI3.enabled = false;
+        Key.enabled = false;
 
     }
     // Update is called once per frame
@@ -31,7 +31,8 @@ public class Getthing : MonoBehaviour
         }
         if (Littlegame3final.finish3 == true)
         {
-            UI3.enabled = true;
+            Key.enabled = true;
+            Getkey = true;
         }
 
     }

@@ -1,11 +1,13 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Littlegame4final : MonoBehaviour
 {
 
-    public static bool finish4 = false;
+    
+
+    public static bool finish4 = false; // 标记是否被触发
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,9 @@ public class Littlegame4final : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        finish4 = true;
+        if(collision.gameObject.tag =="key")
+        {
+            finish4 = true;
+        }
     }
 }

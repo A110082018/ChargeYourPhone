@@ -37,6 +37,7 @@ public class Cameramove : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("Left mouse button clicked");
+
         }
     }
 

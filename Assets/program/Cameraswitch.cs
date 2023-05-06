@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -39,6 +39,8 @@ public class Cameraswitch : MonoBehaviour
             p3.SetActive(true);
             camerastatus = false;
             move.ismove = true;
+            Firstpersoncamera.inFPS = false;
+            Cursor.lockState = CursorLockMode.None; // 释放鼠标
         }
 
         else if(camerastatus == false)
@@ -48,6 +50,11 @@ public class Cameraswitch : MonoBehaviour
             p3.SetActive(false);
             camerastatus = true;
             move.ismove = false;
+            Firstpersoncamera.inFPS = true;
+
+            Cursor.lockState = CursorLockMode.Locked; // 锁定鼠标在屏幕中央
+            Cursor.visible = false; // 隐藏鼠标光标
+
         }
 
     }

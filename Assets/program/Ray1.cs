@@ -1,11 +1,13 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Ray1 : MonoBehaviour
 {
+    float MaxDistance = 100;
     public static bool littlegameplayON = false;
+
     public  GameObject littlegameplay;
     public  GameObject littlecamera;
     public GameObject littlegameplay2;
@@ -33,7 +35,7 @@ public class Ray1 : MonoBehaviour
         littlecamera4.SetActive(false);
         littlegameplay5.SetActive(false);
         littlecamera5.SetActive(false);
-        player.SetActive(true);
+
     }
 
 
@@ -42,7 +44,7 @@ public class Ray1 : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        //�ù��g�u
+        //螢幕射線
 
         RaycastHit hit;
       
@@ -59,12 +61,14 @@ public class Ray1 : MonoBehaviour
         }
 
 
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit) && hit.collider.gameObject.name == "gametrigger2")
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit,MaxDistance) && hit.collider.gameObject.name == "gametrigger2")
         {
             player.SetActive(false);
             littlegameplayON = true;
             littlegameplay2.SetActive(true);
             littlecamera2.SetActive(true);
+            Cursor.lockState = CursorLockMode.None; // 释放鼠标
+            Cursor.visible = true; // 显示鼠标光标
             //Debug.Log(hit.transform.name);
             //Debug.DrawLine(Camera.main.transform.position, hit.transform.position, Color.red, 0.5f, true);
 
@@ -75,6 +79,8 @@ public class Ray1 : MonoBehaviour
             littlegameplayON = true;
             littlegameplay3.SetActive(true);
             littlecamera3.SetActive(true);
+            Cursor.lockState = CursorLockMode.None; // 释放鼠标
+            Cursor.visible = true; // 显示鼠标光标
             //Debug.Log(hit.transform.name);
             //Debug.DrawLine(Camera.main.transform.position, hit.transform.position, Color.red, 0.5f, true);
 

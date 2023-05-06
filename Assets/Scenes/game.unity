@@ -1188,6 +1188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookSpeed: 3
   moveSpeed: 3
+  cameraTransform: {fileID: 111141502}
 --- !u!114 &111141499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2982,6 +2983,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301855899}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &313393234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 313393235}
+  - component: {fileID: 313393236}
+  m_Layer: 0
+  m_Name: cameraUIcontroller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &313393235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313393234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -29.84, y: 23.30648, z: -93.97629}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &313393236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313393234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d240db6f78d124c89073cc3f1cb9d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameralookUI: {fileID: 1067802611}
 --- !u!1 &327097887
 GameObject:
   m_ObjectHideFlags: 0
@@ -9078,9 +9124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8785819110fa5334cb3712c2135e6586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hour: 16
-  Minute: 41
-  PastTime: 0
 --- !u!1 &810247461
 GameObject:
   m_ObjectHideFlags: 0
@@ -11611,7 +11654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1957790371}
-  rotateSpeed: 5
+  rotateSpeed: 2
 --- !u!114 &1133233432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17456,7 +17499,7 @@ PrefabInstance:
     - target: {fileID: 3548202123385455071, guid: d72a07e1a484fc54bb61d78e8098fc44,
         type: 3}
       propertyPath: m_Name
-      value: 2DLITTLEGAME4
+      value: w
       objectReference: {fileID: 0}
     - target: {fileID: 3548202123385455071, guid: d72a07e1a484fc54bb61d78e8098fc44,
         type: 3}

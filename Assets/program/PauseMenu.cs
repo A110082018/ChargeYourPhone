@@ -10,13 +10,17 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject PauseMenuUI;
     public Button[] menuButtons;
+   
 
-
+    
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            
+            Cursor.lockState = CursorLockMode.None; // 释放鼠标
+            Cursor.visible = true; // 显示鼠标光标
 
             if (GameIsPaused)
             {

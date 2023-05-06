@@ -14,8 +14,7 @@ public class Firstpersoncamera : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked; // 锁定鼠标在屏幕中央
-        Cursor.visible = false; // 隐藏鼠标光标
+       
     }
 
     void Update()

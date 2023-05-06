@@ -9,6 +9,8 @@ public class StartMenu : MonoBehaviour
 
     public GameObject startMenuPanel;
 
+    public GameObject startMenuPanel2;
+
     public static bool shouldClosePanel = false;
 
 

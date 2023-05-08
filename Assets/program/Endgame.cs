@@ -13,6 +13,10 @@ public class Endgame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Controller.count == 4) // 當小遊戲計數數到4
+        {
+            //跳出關卡結束的canvas
+        }
+
     }
 }

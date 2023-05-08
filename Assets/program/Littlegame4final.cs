@@ -25,7 +25,7 @@ public class Littlegame4final : MonoBehaviour
     {
         if(collision.gameObject.tag =="key")
         {
-            finish4 = true;
+            gameObject.SetActive(false);
         }
     }
 }

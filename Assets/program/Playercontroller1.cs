@@ -4,30 +4,31 @@ using UnityEngine;
 
 public class Playercontroller1 : MonoBehaviour
 {
-
-   
+    public GameObject player;
     public static bool littlegameplayON = false;
 
 
     // Start is called before the first frame update
     void Start()
-    {   
-        
-    } 
+    {
+
+    }
 
     // Update is called once per frame
 
     void Update()
     {
 
-        if (littlegameplayON)
+        if (littlegameplayON == true)
         {
-            gameObject.SetActive(false);
+            player.SetActive(false);
         }
-        else
+
+        if (littlegameplayON == false)
         {
-            gameObject.SetActive(true);
+            player.SetActive(true);
         }
 
     }
 }
+

@@ -22,8 +22,9 @@ public class Littlegamefinal : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         finish = true;
-       // Time.timeScale = 1;
-       
+        // Time.timeScale = 1;
+        
+
     }
 
 }

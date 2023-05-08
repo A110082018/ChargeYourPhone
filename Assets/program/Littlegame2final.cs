@@ -21,6 +21,8 @@ public class Littlegame2final : MonoBehaviour
     {
         finish2 = true;
         // Time.timeScale = 1;
+       
+
 
     }
 }

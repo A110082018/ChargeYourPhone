@@ -19,6 +19,7 @@ public class Littlegame3final : MonoBehaviour
     void OnMouseDown()
     {
         finish3 = true;
+        
     }
 
 

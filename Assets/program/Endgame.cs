@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Endgame : MonoBehaviour
 {
+    public GameObject panel;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class Endgame : MonoBehaviour
         if(Controller.count == 4) // 當小遊戲計數數到4
         {
             //跳出關卡結束的canvas
+            panel.SetActive(true);
         }
 
     }

@@ -27,6 +27,8 @@ public class Littlegame5final : MonoBehaviour
     {
         finish5 = true;
         Debug.Log("finish");
-    }
         
+
+    }
+
 }

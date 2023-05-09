@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Endgame : MonoBehaviour
 {
+    public static bool GameEnd = false;
     public GameObject panel;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,8 @@ public class Endgame : MonoBehaviour
         {
             //跳出關卡結束的canvas
             panel.SetActive(true);
+
+            GameEnd = true;
         }
 
     }

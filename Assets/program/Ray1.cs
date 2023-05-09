@@ -28,6 +28,7 @@ public class Ray1 : MonoBehaviour
                 Playercontroller1.littlegameplayON = true;
                 littlegameplay.SetActive(true);
                 littlecamera.SetActive(true);
+                
                 Debug.Log(hit.transform.name);
                 Debug.DrawLine(Camera.main.transform.position, hit.transform.position, Color.red, 0.5f, true);
             }
@@ -56,6 +57,8 @@ public class Ray1 : MonoBehaviour
                 Playercontroller1.littlegameplayON = true;
                 littlegameplay5.SetActive(true);
                 littlecamera5.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 Debug.Log(hit.transform.name);
                 Debug.DrawLine(Camera.main.transform.position, hit.transform.position, Color.red, 0.5f, true);
             }

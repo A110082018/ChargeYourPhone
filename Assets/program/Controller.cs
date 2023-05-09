@@ -46,6 +46,8 @@ public class Controller : MonoBehaviour
             // 增加計數器
             count++;
             endpanel1.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             Littlegamefinal.finish = false; // 重置小游戏完成变量
         }
 
@@ -58,6 +60,8 @@ public class Controller : MonoBehaviour
             // 增加計數器
             count++;
             endpanel2.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             Littlegame2final.finish2 = false; // 重置小游戏完成变量
         }
 
@@ -85,6 +89,8 @@ public class Controller : MonoBehaviour
             // 增加計數器
             count++;
             endpanel3.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             Littlegame5final.finish5 = false; // 重置小游戏完成变量
         }
 

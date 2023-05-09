@@ -10,9 +10,12 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject PauseMenuUI;
     public Button[] menuButtons;
-   
+    public Cameramove cameramove;
 
-    
+    private void Start()
+    {
+        
+    }
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +37,7 @@ public class PauseMenu : MonoBehaviour
 
         if (GameIsPaused)
         {
+
             if (Input.GetKeyDown(KeyCode.W))
             {
                 selectedOption--;
@@ -76,7 +80,9 @@ public class PauseMenu : MonoBehaviour
 
                 }
             }
+           
         }
+       
     }
         //private void SelectNextOption()
         //{
@@ -101,6 +107,8 @@ public class PauseMenu : MonoBehaviour
             PauseMenuUI.SetActive(false);
             Time.timeScale = 1f;
             GameIsPaused = false;
+
+            cameramove.EnableRotation(true);
         }
 
         void Pause()
@@ -108,7 +116,7 @@ public class PauseMenu : MonoBehaviour
             PauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
             GameIsPaused = true;
-
+            cameramove.EnableRotation(false);
         }
 
         //public void LoadMenu()

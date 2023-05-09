@@ -16,6 +16,10 @@ public class AreaTrigger : MonoBehaviour
             // 在displayTime秒後，隱藏Panel
             StartCoroutine(HidePanelAfterTime(displayTime));
         }
+        if(Endgame.GameEnd ==true)
+        {
+            panel.SetActive(false);
+        }
     }
 
     IEnumerator HidePanelAfterTime(float time)

@@ -29,7 +29,7 @@ public class Controller : MonoBehaviour
         UI1.enabled = false;
         UI2.enabled = false;
         Key.enabled = false;
-
+        picture.enabled = false;
     }
 
     private void Update()

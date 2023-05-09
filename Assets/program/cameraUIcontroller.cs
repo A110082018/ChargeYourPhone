@@ -15,12 +15,20 @@ public class cameraUIcontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Firstpersoncamera.inFPS == true)
+        if (Firstpersoncamera.inFPS == true)
         {
             cameralookUI.SetActive(true);
-            
+
         }
-        if(Firstpersoncamera.inFPS == false)
+        if (Firstpersoncamera.inFPS == false)
+        {
+            cameralookUI.SetActive(false);
+        }
+        if (Playercontroller1.littlegameplayON == true)
+        {
+            cameralookUI.SetActive(false);
+        }
+        if(Endgame.GameEnd == true)
         {
             cameralookUI.SetActive(false);
         }

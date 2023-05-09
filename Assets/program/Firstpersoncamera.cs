@@ -20,7 +20,7 @@ public class Firstpersoncamera : MonoBehaviour
     void Update()
     {
 
-      
+     
 
         // 获取鼠标移动量
         rotationX += Input.GetAxis("Mouse X") * lookSpeed;

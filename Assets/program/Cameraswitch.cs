@@ -28,6 +28,7 @@ public class Cameraswitch : MonoBehaviour
 
             camera();
         }
+       
 
     }
     void camera()
@@ -54,6 +55,7 @@ public class Cameraswitch : MonoBehaviour
 
             Cursor.lockState = CursorLockMode.Locked; // 锁定鼠标在屏幕中央
             Cursor.visible = false; // 隐藏鼠标光标
+            
 
         }
 

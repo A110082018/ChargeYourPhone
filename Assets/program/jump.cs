@@ -19,7 +19,14 @@ public class jump : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && jumpsRemaining > 0)
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            if (jumpsRemaining == 1) // 如果還剩下最後一次跳躍次數，只使用一半的力量
+            {
+                rb.AddForce(Vector3.up * jumpForce * 0.5f, ForceMode.Impulse);
+            }
+            else
+            {
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            }
             jumpsRemaining--;
         }
     }

@@ -23,14 +23,16 @@ public class Controller : MonoBehaviour
     public GameObject littlecamera4;
     public GameObject littlegameplay5;
     public GameObject littlecamera5;
-
-
+    public GameObject endpanel1;
+    public GameObject endpanel2;
+    public GameObject endpanel3;
     void Start()
     {
         UI1.enabled = false;
         UI2.enabled = false;
         Key.enabled = false;
         picture.enabled = false;
+
     }
 
     private void Update()
@@ -43,7 +45,7 @@ public class Controller : MonoBehaviour
             UI1.enabled = true;
             // 增加計數器
             count++;
-
+            endpanel1.SetActive(true);
             Littlegamefinal.finish = false; // 重置小游戏完成变量
         }
 
@@ -55,7 +57,7 @@ public class Controller : MonoBehaviour
             UI2.enabled = true;
             // 增加計數器
             count++;
-
+            endpanel2.SetActive(true);
             Littlegame2final.finish2 = false; // 重置小游戏完成变量
         }
 
@@ -68,6 +70,7 @@ public class Controller : MonoBehaviour
             Getkey = true;
             // 增加計數器
             count++;
+            
             Littlegame3final.finish3 = false; // 重置小游戏完成变量
         }
 
@@ -81,6 +84,7 @@ public class Controller : MonoBehaviour
 
             // 增加計數器
             count++;
+            endpanel3.SetActive(true);
             Littlegame5final.finish5 = false; // 重置小游戏完成变量
         }
 

@@ -21216,9 +21216,9 @@ MonoBehaviour:
   littlecamera4: {fileID: 34477108}
   littlegameplay5: {fileID: 96784181}
   littlecamera5: {fileID: 64053087}
-  panel01: {fileID: 0}
-  panel02: {fileID: 0}
-  panel03: {fileID: 0}
+  endpanel1: {fileID: 1537009993}
+  endpanel2: {fileID: 46069450}
+  endpanel3: {fileID: 802746582}
 --- !u!4 &2008957537
 Transform:
   m_ObjectHideFlags: 0

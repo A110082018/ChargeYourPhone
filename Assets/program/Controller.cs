@@ -26,6 +26,7 @@ public class Controller : MonoBehaviour
     public GameObject endpanel1;
     public GameObject endpanel2;
     public GameObject endpanel3;
+    public GameObject endpanel4;
     void Start()
     {
         UI1.enabled = false;
@@ -73,6 +74,7 @@ public class Controller : MonoBehaviour
             Key.enabled = true;
             Getkey = true;
             // 增加計數器
+            endpanel4.SetActive(true);
             count++;
             
             Littlegame3final.finish3 = false; // 重置小游戏完成变量

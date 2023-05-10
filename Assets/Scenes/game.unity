@@ -1606,8 +1606,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 75}
-  m_SizeDelta: {x: 859.03, y: 267.1648}
+  m_AnchoredPosition: {x: 27, y: 0}
+  m_SizeDelta: {x: 660.8999, y: 69.0347}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &105379086
 MonoBehaviour:
@@ -1631,11 +1631,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 48
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -10394,7 +10394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dc51a6f328ffc7b4880abc935d07f176, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e067591971c39b4e8e64706eebd92c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21656,6 +21656,7 @@ MonoBehaviour:
   endpanel1: {fileID: 1537009993}
   endpanel2: {fileID: 46069450}
   endpanel3: {fileID: 802746582}
+  endpanel4: {fileID: 1561671696}
 --- !u!4 &2008957537
 Transform:
   m_ObjectHideFlags: 0
@@ -22083,7 +22084,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.3, y: 4.35}
+    oldSize: {x: 23.603092, y: 16.4}
     newSize: {x: 6.3, y: 4.35}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -22133,7 +22134,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dc51a6f328ffc7b4880abc935d07f176, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd499d24dcecc1b41972c2bc7866f216, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
